@@ -1,11 +1,16 @@
 from netaddr import *
 import os
+import re
 
-for ip in IPNetwork('10.23.12.204/20').iter_hosts():
-    response = os.system("ping -t -n 1 -w 10 %s" % ip )
-    if response == 0:
-        print ip, 'is up!'
-    else:
-        print ip, 'is down!'
-
-
+os.system("netsh interface ip delete arpcache > nul")
+host=raw_input("Enter host, use XXX.XXX.XXX.XXX/XX f.e. 192.168.0.1/24:")
+if re.match('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/\d{1,2}', host) is not None:
+    for ip in IPNetwork(host).iter_hosts():
+        response = os.system("ping -n 1 -w 1 %s > nul" % ip)
+        if response == 0:
+            print ip, 'is up!'
+            os.system("nslookup %s" % ip)
+        else:
+            pass
+else:
+    sys.exit("Ip is not valid. Please, use XXX.XXX.XXX.XXX/XX f.e. 192.168.0.1/24")
