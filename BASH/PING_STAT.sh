@@ -18,5 +18,5 @@ else
     echo "For packet size ${i} Loss is $(grep -e "[[:digit:]]*% packet loss" log.txt | cut -d ' ' -f6)"
     done
 fi
-cat log.txt
+rm log.txt
 exit 0
