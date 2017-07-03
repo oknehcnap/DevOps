@@ -12,5 +12,6 @@ if re.match('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/\d{1,2}', host) is not None:
             os.system("nslookup %s" % ip)
         else:
             pass
+    raw_input("Press any key to exit...")
 else:
     sys.exit("Ip is not valid. Please, use XXX.XXX.XXX.XXX/XX f.e. 192.168.0.1/24")
