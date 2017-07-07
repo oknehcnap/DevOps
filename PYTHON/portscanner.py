@@ -1,5 +1,5 @@
 import socket
- 
+	
  
 def portScan (tgtIp, tgtPort, code = 1):
     try:
@@ -24,5 +24,6 @@ for port in range(1,200):
             print ("Port %d: is opened" % port)
     except Exception, e:
         pass
+        
  
 raw_input("Press any key to exit...")

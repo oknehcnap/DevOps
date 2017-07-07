@@ -9,7 +9,6 @@ if re.match('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/\d{1,2}', host) is not None:
         response = os.system("ping -n 1 -w 1 %s > nul" % ip)
         if response == 0:
             print ip, 'is up!'
-            os.system("nslookup %s" % ip)
         else:
             pass
     raw_input("Press any key to exit...")
