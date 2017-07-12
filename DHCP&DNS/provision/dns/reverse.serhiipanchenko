@@ -6,9 +6,9 @@ $TTL 86400
         604800      ;Expire
         86400       ;Minimum TTL
 )
+$ORIGIN 60.16.172.in-addr.arpa.
 @       IN  NS          masterdns.serhiipanchenko.local.
-@       IN  PTR         serhiipanchenko.local.
-masterdns       IN  A   172.16.60.1
-client          IN  A   172.16.60.10
+@       IN  NS          masterdns.serhiiDevOps.org.
 1		IN  PTR         masterdns.serhiipanchenko.local.
-10		IN  PTR         client.serhiipanchenko.local.
+1		IN  PTR         masterdns.serhiiDevOps.org.
+2		IN	PTR			ubdhcp.serhiiDevOps.org.
