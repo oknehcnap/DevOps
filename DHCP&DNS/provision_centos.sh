@@ -17,8 +17,8 @@ chown -v -R named:named /var/named
 chown -v named:named /etc/named.conf
 restorecon -rv /var/named
 restorecon /etc/named.conf
-cat /vagrant/provision/dns/ifcfg-eth1 > /etc/sysconfig/network-scripts/ifcfg-eth1
-systemctl restart network
+#cat /vagrant/provision/dns/ifcfg-eth1 > /etc/sysconfig/network-scripts/ifcfg-eth1
+#systemctl restart network
 systemctl restart named
 cat /etc/rndc.key > /vagrant/dhcp2_key.conf
 systemctl restart dhcpd

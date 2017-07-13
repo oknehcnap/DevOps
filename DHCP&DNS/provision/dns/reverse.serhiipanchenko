@@ -11,4 +11,5 @@ $ORIGIN 60.16.172.in-addr.arpa.
 @       IN  NS          masterdns.serhiiDevOps.org.
 1		IN  PTR         masterdns.serhiipanchenko.local.
 1		IN  PTR         masterdns.serhiiDevOps.org.
-2		IN	PTR			ubdhcp.serhiiDevOps.org.
+40		IN	PTR			street.serhiiDevOps.org.
+41		IN	PTR			campus.serhiiDevOps.org.

@@ -11,8 +11,8 @@ $TTL    604800
 ;  A records
 masterdns.serhiiDevOps.org.		IN		A		172.16.60.1
 ubdhcp.serhiiDevOps.org.		IN		A		172.16.60.2
-street.serhiiDevOps.org.		IN		A		172.16.60.1
-campus.serhiiDevOps.org.		IN		A		172.16.60.1
+street.serhiiDevOps.org.		IN		A		172.16.60.40
+campus.serhiiDevOps.org.		IN		A		172.16.60.41
 
 
 ;  MX records

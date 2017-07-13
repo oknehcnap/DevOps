@@ -15,10 +15,10 @@ Vagrant.configure("2") do |config|
 	config.vbguest.auto_update = true
 	hosts = [ { name: 'dhcp001', ip: '172.16.60.1', box:'centos/7', host_type: 1 },
 			  { name: 'dhcp002', ip: '172.16.60.2', box:'ubuntu/xenial64', host_type: 2  },
-			  { name: 'box003',  mac:'080027302931', box:'centos/7', host_type: 3 },
+			  { name: 'box003',  mac:'080027302931', box:'ubuntu/xenial64', host_type: 3 },
 			  { name: 'box004',  mac:'080027302932', box:'ubuntu/trusty32', host_type: 4 },
 			  { name: 'box005',  mac:'080027302933', box:'ubuntu/xenial64', host_type: 4 },
-			  { name: 'box006',  mac:'080027302934', box:'centos/7', host_type: 3 },
+			  { name: 'box006',  mac:'080027302934', box:'ubuntu/xenial64', host_type: 4 },
 			  { name: 'box007',  mac:'080027302935', box:'kensykora/windows_2012_r2_standard', host_type: 3 }]
 	hosts.each do |host|
 		config.vm.define host[:name] do |node|
