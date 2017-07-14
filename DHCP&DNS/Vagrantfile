@@ -35,11 +35,10 @@ Vagrant.configure("2") do |config|
 			end
 			
 			if (host[:host_type] == 3)
-				node.vm.network :private_network, mac: host[:mac], type:"dhcp",  auto_config: false, virtualbox__intnet: "intnet"
+				node.vm.network :private_network, mac: host[:mac], type:"dhcp",  virtualbox__intnet: "intnet"
 			end
 			if (host[:host_type] == 4)
-				node.vm.network :private_network, mac: host[:mac], type:"dhcp", auto_config: false, virtualbox__intnet: "intnet"
-				node.vm.provision 'shell', inline: "sudo dhclient -v"
+				node.vm.network :private_network, mac: host[:mac], type:"dhcp", virtualbox__intnet: "intnet"
 			end
 			
 			node.vm.provider :virtualbox do |vb|
