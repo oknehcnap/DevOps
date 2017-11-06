@@ -1,0 +1,12 @@
+  upstream myproject {
+		server client1.kyiv.epam.com:80;
+        server client2.kyiv.epam.com:80;
+  }
+
+  server {
+	listen 80;
+    location / {
+      try_files $uri $uri/ =404;
+    }
+  }
+}

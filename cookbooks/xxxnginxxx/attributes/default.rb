@@ -1,0 +1,1 @@
+default['nginx']['log_dir']      = '/var/log/nginx_log'
